@@ -29,7 +29,7 @@ Create a folder called `schools-database` in your `projects` (or other working) 
 
 ## Create a database
 
-Start of by creating the database
+Start off by creating the database
 
 ```
 createdb schools
@@ -43,7 +43,7 @@ psql schools
 
 ## Create tables
 
-Let's start of by creating some tables.
+Let's start off by creating some tables.
 
 Use this DDL (Database Definition Language) script to create a teacher table.
 
@@ -310,7 +310,7 @@ To run this function use this command `select *  from create_subject('Geography'
 
 ### Create these functions
 
-* Create a function called `add_teacher`that adds a new teacher and ensures that the `email` for the `teacher` is unique. If the email is not unique the teacher should not be added to the database and the function should return false.
+* Create a function called `add_teacher` that adds a new teacher and ensures that the `email` for the `teacher` is unique. If the email is not unique the teacher should not be added to the database and the function should return false.
 
 * Create a function called `link_teacher_to_subject` that links a teacher to a subject and ensures that a `teacher` is not linked to a subject more than once.
 
@@ -347,7 +347,7 @@ You will need to delete it first by using this command:
 drop function find_subjects();
 ```
 
-And then recreate it using this script.
+And then recreate it using this script:
 
 
 ```sql
