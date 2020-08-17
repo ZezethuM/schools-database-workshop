@@ -35,10 +35,42 @@ Start off by creating the database
 createdb schools
 ```
 
+### If you are using Ubuntu
+
+You might need to create the new schools database like this:
+
+```
+sudo -u postgres createdb schools;
+```
+
+Then give your user access to the schools database, using these commands.
+
+First connect to `psql` as the `postgres` user.
+
+```
+sudo -u postgres psql;
+```
+
+You might need to create a postgres user that match the current username you are using.
+
+But you might already have done this in the past.
+
+```
+sudo -u postgres createuser your_user_name -P;
+```
+
+Grant access to the `schools` database to your current user.
+
+```
+grant all privileges on database schools to your_user_name;
+```
+
+## Connect to the database using psql
+
 Connect to the database use `psql`.
 
 ```
-psql schools
+psql -d schools
 ```
 
 ## Create tables
@@ -65,7 +97,7 @@ create table teacher(
 Create the table by running this command in `psql`
 
 ```sql
-\i sql/create_teacher_table.sql
+\i sql/create_teacher.sql
 ```
 
 Use the `\d` command in `psql` to see the table that has been created.
